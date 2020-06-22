@@ -1,16 +1,17 @@
 # Тестовое задание Красцветмет
 
-### Запуск проекта:
-
-composer install -vvv && \\\
-touch database/database.sqlite && \\\
-cp .env.example .env && \\\
-php artisan key:generate && \\\
-php artisan storage:link && \\\
-php artisan migrate:fresh --seed && \\\
-php artisan db:seed --class=CommercialImagesSeeder.php && \\\
-php artisan test && \\\
-php artisan serve
+### Запуск проекта (php 7.4 + sqlite):
+```
+composer install -vvv && \
+  touch database/database.sqlite && \
+  cp .env.example .env && \
+  php artisan key:generate && \
+  php artisan storage:link && \
+  php artisan db:seed --class=CommercialImagesSeeder && \
+  php artisan migrate:fresh --seed && \
+  php artisan test && \
+  php artisan serve
+```
 
 
 #### Статистика
