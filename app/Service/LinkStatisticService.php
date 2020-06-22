@@ -15,11 +15,11 @@ class LinkStatisticService
     /**
      * @var CommercialImageService
      */
-    private $commercialImageService;
+    private CommercialImageService $commercialImageService;
     /**
      * @var LinkStatisticRepository
      */
-    private $linkStatisticRepository;
+    private LinkStatisticRepository $linkStatisticRepository;
 
     /**
      * LinkStatisticService constructor.

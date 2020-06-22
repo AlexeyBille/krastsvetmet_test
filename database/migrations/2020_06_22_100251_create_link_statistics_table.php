@@ -15,11 +15,15 @@ class CreateLinkStatisticsTable extends Migration
     {
         Schema::create('link_statistics', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('link_id')->unsigned();
+            $table->foreignId('link_id')
+                ->constrained('links')
+                ->onDelete('cascade');
             $table->ipAddress('visitor_ip');
             $table->timestamp('visit_at');
             $table->string('commercial_image')->nullable();
             $table->timestamps();
+
+
 
             $table->index(['visitor_ip', 'visit_at']);
         });

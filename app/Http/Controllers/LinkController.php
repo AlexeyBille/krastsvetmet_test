@@ -19,15 +19,15 @@ class LinkController extends Controller
     /**
      * @var ShortUrlGenerator
      */
-    private $shortUrlGenerator;
+    private ShortUrlGenerator $shortUrlGenerator;
     /**
      * @var LinkService
      */
-    private $linkService;
+    private LinkService $linkService;
     /**
      * @var LinkStatisticService
      */
-    private $linkStatisticService;
+    protected $linkStatisticService;
 
     /**
      * LinkController constructor.

@@ -14,7 +14,7 @@ class LinkService
     /**
      * @var LinkRepository
      */
-    private $linkRepository;
+    private LinkRepository $linkRepository;
 
     public function __construct(LinkRepository $linkRepository)
     {
